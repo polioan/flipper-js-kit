@@ -1,0 +1,68 @@
+{
+  "name": "flipper-js-kit",
+  "version": "0.0.1",
+  "author": {
+    "name": "Ivan Polushin",
+    "url": "https://t.me/polioan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polioan/flipper-js-kit"
+  },
+  "homepage": "https://github.com/polioan/flipper-js-kit#readme",
+  "bugs": {
+    "url": "https://github.com/polioan/flipper-js-kit/issues"
+  },
+  "funding": "https://boosty.to/polioan",
+  "keywords": [
+    "flipperzero",
+    "flipper zero",
+    "flipper",
+    "mjs",
+    "mJS",
+    "bad usb"
+  ],
+  "description": "Kit for creating JavaScript scripts for flipper zero!",
+  "license": "MIT",
+  "engines": {
+    "node": ">=15"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck:bin": "tsc --project tsconfig.bin.json",
+    "typecheck:types": "tsc --project tsconfig.types.json",
+    "typecheck": "npm run typecheck:bin && npm run typecheck:types",
+    "lint:bin": "eslint . --ext .ts,.js,.cts,.cjs,.mjs --config .eslintrc.bin.js",
+    "lint:types": "eslint . --ext .ts,.js,.cts,.cjs,.mjs --config .eslintrc.types.js",
+    "lint": "npm run lint:bin && npm run lint:types",
+    "pack": "rimraf pack && mkdir pack && npm pack --pack-destination pack"
+  },
+  "dependencies": {
+    "@rollup/plugin-inject": "^5.0.5",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-virtual": "^3.0.2",
+    "rollup": "^4.18.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-polioan": "^1.8.4",
+    "eslint-plugin-jsdoc": "^46.10.1",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-spellcheck": "^0.0.20",
+    "eslint-plugin-typescript-enum": "^2.1.0",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "prettier": "^3.2.5",
+    "prettier-plugin-jsdoc": "^1.3.0",
+    "rimraf": "^5.0.7",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
+  }
+}

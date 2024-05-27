@@ -1,0 +1,5 @@
+print(''.at(1))
+print(''.charCodeAt(1))
+print(''.indexOf('bc', 20))
+print(''.slice(5, 20))
+print('ы'.length === 2)
